@@ -1,1 +1,82 @@
-<p>parent works!</p>
+<header>
+  <h1 style="text-align: center; margin: 30px 30px" class="text-warning">
+    buy-products
+  </h1>
+</header>
+
+<div class="alert alert-success border d-flex align-items-center"  *ngIf="alertShow">
+  <strong class="text-success">{{alertShow}} </strong>&nbsp;is Selected added in cart...
+  <button class="btn btn-success ml-auto" >Checkout</button>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem">
+      <div class="card-body">
+        <img
+          class="card-img-top"
+          src="../../assets/iPhone.jpg"
+          alt="Card image cap"
+        />
+        <h5 class="card-title">Iphone</h5>
+        <p class="card-text">With supporting text below .</p>
+        <button class="btn btn-success" (click)="onselectproduct('Iphone')">
+          Select this Product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem">
+      <div class="card-body">
+        <img
+          class="card-img-top"
+          src="../../assets/iPhone.jpg"
+          alt="Card image cap"
+        />
+        <h5 class="card-title">Laptop</h5>
+        <p class="card-text">With supporting text below .</p>
+        <button class="btn btn-success" (click)="onselectproduct('Laptop')">
+          Select this Product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem">
+      <div class="card-body">
+        <img
+          class="card-img-top"
+          src="../../assets/iPhone.jpg"
+          alt="Card image cap"
+        />
+        <h5 class="card-title">TV</h5>
+        <p class="card-text">With supporting text below .</p>
+        <button class="btn btn-success" (click)="onselectproduct('TV')">
+          Select this Product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem">
+      <div class="card-body">
+        <img
+          class="card-img-top"
+          src="../../assets/iPhone.jpg"
+          alt="Card image cap"
+        />
+        <h5 class="card-title">Ipad</h5>
+        <p class="card-text">With supporting text below .</p>
+        <button class="btn btn-success" (click)="onselectproduct('Ipad')">
+          Select this Product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 bg-warning text-dark text-center py-3">
+    <h2 *ngIf="!productselected">please select any product</h2>
+    <h2 *ngIf="productselected">{{ selectedprod }} is Selected</h2>
+    <button type="button" class="btn btn-light" (click)="alertShowBtn()">Add to cart</button>
+  </div>
+</div>
