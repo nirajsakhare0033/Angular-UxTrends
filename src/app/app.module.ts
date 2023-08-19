@@ -15,18 +15,25 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { CartoonComponent } from './product/cartoon/cartoon.component';
 //routing
 const appRoutes: Routes = [
-  { path:'', redirectTo:'ngfor', pathMatch:'full'},
+  { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutusComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'ngfor', component:NgforComponent},
-  { path: 'binding', component:BindingComponent},
-  { path: 'event', component:EventComponent},
-  { path: 'container', component:MycontainerComponent},
-  {path:'**' ,component:PagenotfoundComponent},
+  {
+    path: 'product',
+    
+    children: [
+      {path:'', component:ProductComponent},
+      { path: 'cartoon', component: CartoonComponent }],
+  },
+  { path: 'ngfor', component: NgforComponent },
+  { path: 'binding', component: BindingComponent },
+  { path: 'event', component: EventComponent },
+  { path: 'container', component: MycontainerComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 //routing
 
@@ -43,6 +50,7 @@ const appRoutes: Routes = [
     ProductComponent,
     ContactComponent,
     PagenotfoundComponent,
+    CartoonComponent,
   ],
   //router
   imports: [
