@@ -10,7 +10,7 @@ export class NgforComponent {
   onCreateUser(box: any) {
     this.users.push({ name: box.value });
   }
-  onRemoveUser1(item:any) {
-    this.users.splice(item, 1);
+  onRemoveUser1(i:any) {
+    this.users.splice(i, 1);
   }
 }

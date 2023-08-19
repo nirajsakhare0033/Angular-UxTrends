@@ -9,6 +9,23 @@ import { BindingComponent } from './binding/binding.component';
 import { EventComponent } from './event/event.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
+import { RouterModule, Routes } from '@angular/router';
+//routing
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutusComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'ngfor', component:NgforComponent},
+  { path: 'binding', component:BindingComponent},
+  { path: 'event', component:EventComponent},
+  { path: 'container', component:MycontainerComponent},
+];
+//routing
 
 @NgModule({
   declarations: [
@@ -17,14 +34,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TopnavComponent,
     BindingComponent,
     EventComponent,
-    NgforComponent
+    NgforComponent,
+    HomeComponent,
+    AboutusComponent,
+    ProductComponent,
+    ContactComponent,
   ],
+  //router
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
