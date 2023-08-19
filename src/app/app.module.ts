@@ -17,6 +17,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CartoonComponent } from './product/cartoon/cartoon.component';
 import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     PagenotfoundComponent,
     CartoonComponent,
     ParentComponent,
+    ChildComponent,
   ],
   //router
   imports: [
