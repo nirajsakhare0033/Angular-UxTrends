@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 //routing
 const appRoutes: Routes = [
   { path:'', redirectTo:'ngfor', pathMatch:'full'},
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'binding', component:BindingComponent},
   { path: 'event', component:EventComponent},
   { path: 'container', component:MycontainerComponent},
+  {path:'**' ,component:PagenotfoundComponent},
 ];
 //routing
 
@@ -40,6 +42,7 @@ const appRoutes: Routes = [
     AboutusComponent,
     ProductComponent,
     ContactComponent,
+    PagenotfoundComponent,
   ],
   //router
   imports: [
