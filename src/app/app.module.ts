@@ -16,7 +16,8 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 //routing
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path:'', redirectTo:'ngfor', pathMatch:'full'},
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutusComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'product', component: ProductComponent },
