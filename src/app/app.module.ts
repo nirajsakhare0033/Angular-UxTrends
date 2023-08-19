@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MycontainerComponent } from './mycontainer/mycontainer.component';
 import { TopnavComponent } from './mycontainer/topnav/topnav.component';
 import { BindingComponent } from './binding/binding.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MycontainerComponent,
     TopnavComponent,
-    BindingComponent
+    BindingComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
