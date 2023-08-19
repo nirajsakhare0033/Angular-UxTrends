@@ -7,6 +7,8 @@ import { MycontainerComponent } from './mycontainer/mycontainer.component';
 import { TopnavComponent } from './mycontainer/topnav/topnav.component';
 import { BindingComponent } from './binding/binding.component';
 import { EventComponent } from './event/event.component';
+import { NgforComponent } from './ngfor/ngfor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { EventComponent } from './event/event.component';
     MycontainerComponent,
     TopnavComponent,
     BindingComponent,
-    EventComponent
+    EventComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
