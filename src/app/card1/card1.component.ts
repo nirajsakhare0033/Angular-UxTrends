@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../appService/message.service';
 
 @Component({
@@ -6,12 +6,19 @@ import { MessageService } from '../appService/message.service';
   templateUrl: './card1.component.html',
   styleUrls: ['./card1.component.css'],
 })
-export class Card1Component {
+export class Card1Component implements OnInit{
   //createing service
 
   constructor(private _msgService: MessageService) {}
 
+  products = {};
+
+  ngOnInit() {
+    this.products = this._msgService.product.id;
+  }
+
   btnaleart() {
     this._msgService.msgbtnaleart();
   }
+  // product:string="test1"
 }

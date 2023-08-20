@@ -14,4 +14,10 @@ export class Card2Component {
   btn2() {
     this._msg.msgbtnaleart();
   }
+ // product: string = 'test1';
+ product={};
+
+  ngOnInit(){
+    this.product=this._msg.product
+  }
 }
