@@ -15,9 +15,10 @@ export class Card2Component {
     this._msg.msgbtnaleart();
   }
  // product: string = 'test1';
- product={};
+ product:any={};
 
   ngOnInit(){
-    this.product=this._msg.product
+    //this.product=this._msg.product
+    this._msg.product().subscribe(productData=>this.product=productData)
   }
 }

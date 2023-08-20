@@ -1,1 +1,17 @@
-<p>home works!</p>
+
+<hr>
+<hr>
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+  </div>
+  <input [(ngModel)]="C" (ngModelChange)="changed(C, 'C')" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+</div>
+<br><br>
+<br><br>
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+  </div>
+  <input [(ngModel)]="F"(ngModelChange)="changed(F, 'F')" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+</div>

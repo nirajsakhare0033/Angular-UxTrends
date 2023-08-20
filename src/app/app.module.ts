@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MycontainerComponent } from './mycontainer/mycontainer.component';
@@ -21,6 +21,7 @@ import { ChildComponent } from './child/child.component';
 import { Card1Component } from './card1/card1.component';
 import { Card2Component } from './card2/card2.component';
 import { MessageService } from './appService/message.service';
+import { FormsModule } from '@angular/forms';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -61,12 +62,15 @@ const appRoutes: Routes = [
     ChildComponent,
     Card1Component,
     Card2Component,
+    
   ],
   //router
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

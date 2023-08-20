@@ -6,15 +6,18 @@ import { MessageService } from '../appService/message.service';
   templateUrl: './card1.component.html',
   styleUrls: ['./card1.component.css'],
 })
-export class Card1Component implements OnInit{
+export class Card1Component implements OnInit {
   //createing service
 
   constructor(private _msgService: MessageService) {}
 
-  products = {};
+  products:any = [];
 
   ngOnInit() {
-    this.products = this._msgService.product.id;
+    // this.products = this._msgService.product;
+    this._msgService
+      .product()
+      .subscribe((productData) => (this.products = productData));
   }
 
   btnaleart() {
