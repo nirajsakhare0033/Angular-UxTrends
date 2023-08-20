@@ -22,6 +22,8 @@ import { Card1Component } from './card1/card1.component';
 import { Card2Component } from './card2/card2.component';
 import { MessageService } from './appService/message.service';
 import { FormsModule } from '@angular/forms';
+import { TemperatureComponent } from './temperature/temperature.component';
+import { WeatherComponent } from './weather/weather.component';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -40,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'event', component: EventComponent },
   { path: 'container', component: MycontainerComponent },
   {path:'buy-products', component:ParentComponent},
+  {path:'temperature', component:TemperatureComponent},
   { path: '**', component: PagenotfoundComponent },
 ];
 //routing
@@ -62,6 +65,8 @@ const appRoutes: Routes = [
     ChildComponent,
     Card1Component,
     Card2Component,
+    TemperatureComponent,
+    WeatherComponent,
     
   ],
   //router
