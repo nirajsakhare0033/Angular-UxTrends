@@ -18,6 +18,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CartoonComponent } from './product/cartoon/cartoon.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Card1Component } from './card1/card1.component';
+import { Card2Component } from './card2/card2.component';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -56,6 +58,8 @@ const appRoutes: Routes = [
     CartoonComponent,
     ParentComponent,
     ChildComponent,
+    Card1Component,
+    Card2Component,
   ],
   //router
   imports: [

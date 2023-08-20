@@ -74,9 +74,11 @@
       </div>
     </div>
   </div>
+  
   <div class="col-md-12 bg-warning text-dark text-center py-3">
     <h2 *ngIf="!productselected">please select any product</h2>
     <h2 *ngIf="productselected">{{ selectedprod }} is Selected</h2>
     <button type="button" class="btn btn-light" (click)="alertShowBtn()">Add to cart</button>
   </div>
+  
 </div>
