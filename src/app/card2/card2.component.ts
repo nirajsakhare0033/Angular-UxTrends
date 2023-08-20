@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageService } from '../appService/message.service';
 
 @Component({
   selector: 'app-card2',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./card2.component.css'],
 })
 export class Card2Component {
-  btnaleart(){
-    window.alert("thanks for iphone subscribe.....")
+  //constructor(private _mesg.MessageService){}
+
+  constructor(private _msg: MessageService) {}
+
+  btn2() {
+    this._msg.msgbtnaleart();
   }
 }

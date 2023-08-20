@@ -20,6 +20,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Card1Component } from './card1/card1.component';
 import { Card2Component } from './card2/card2.component';
+import { MessageService } from './appService/message.service';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -71,7 +72,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
