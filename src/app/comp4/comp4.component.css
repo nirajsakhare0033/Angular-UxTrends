@@ -1,0 +1,6 @@
+.box{
+  text-align: center;
+  border: 1px soild gray;
+  flex: 1 1 auto;
+  margin: auto;
+}

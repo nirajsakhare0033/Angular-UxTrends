@@ -24,6 +24,10 @@ import { MessageService } from './appService/message.service';
 import { FormsModule } from '@angular/forms';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WeatherComponent } from './weather/weather.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 //routing
 const appRoutes: Routes = [
   { path: '', redirectTo: 'ngfor', pathMatch: 'full' },
@@ -43,6 +47,7 @@ const appRoutes: Routes = [
   { path: 'container', component: MycontainerComponent },
   {path:'buy-products', component:ParentComponent},
   {path:'temperature', component:TemperatureComponent},
+  {path:'weather', component:WeatherComponent},
   { path: '**', component: PagenotfoundComponent },
 ];
 //routing
@@ -67,6 +72,10 @@ const appRoutes: Routes = [
     Card2Component,
     TemperatureComponent,
     WeatherComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
     
   ],
   //router

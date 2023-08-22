@@ -1,17 +1,26 @@
-
-<hr>
-<hr>
-<div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+<div class="page-area">
+  <div class="box">
+    <h1>
+      User name is <span><span class="text-success">Niraj Sakhare</span></span>
+    </h1>
+    
+    <hr>
   </div>
-  <input [(ngModel)]="C" (ngModelChange)="changed(C, 'C')" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-</div>
-<br><br>
-<br><br>
-<div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+  <div class="row">
+    <div class="col-md-6">
+      <app-comp1></app-comp1>
+    </div>
+    <br><br>
+    <div class="col-md-6">
+        <app-comp2></app-comp2>
+    </div>
+    <br><br>
+    <div class="col-md-6">
+      <app-comp3></app-comp3>
+    </div>
+    <br><br>
+    <div class="col-md-6">
+      <app-comp4></app-comp4>
+    </div>
   </div>
-  <input [(ngModel)]="F"(ngModelChange)="changed(F, 'F')" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 </div>

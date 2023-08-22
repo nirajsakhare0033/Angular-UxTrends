@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 //import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -19,7 +19,13 @@ export class MessageService {
   //   id: 1,
   // };
 
-  product(): Observable<any>{
+  product(): Observable<any> {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+  OnChanged(box) {
+    //this.username=box.value;
+    this.username.next(box.value);
+  }
+
+  username = new Subject<any>();
 }
