@@ -1,4 +1,8 @@
 <div class="page-area">
+<div class="col-md-12">
   <h2>About Us</h2>
-  <app-comp1></app-comp1>
+  <input type="text" placeholder="updated Name" #box/>
+      <button (click)="submitValue(box)">Update</button>
+  <app-aboutus-child [myValue]="value"></app-aboutus-child>
+</div>
 </div>
